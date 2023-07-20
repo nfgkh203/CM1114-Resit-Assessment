@@ -1,6 +1,31 @@
+<!-- Security Markdown
+Threat Model
+
+Threat Source: External
+
+Threat Agent: Aberbean University
+
+Threat Description: The threat agent can attempt to disrupt the registration process, obtain confidential information from the database, or manipulate existing registrations.
+
+Threat Intention: Intentional
+
+Threat Motivation: Undermine the operations and reputation of RGU VR.
+
+Threat Impact: Interruption of the registration process, unauthorized access to confidential member information, falsification of member registrations, potential identity theft, and violation of data privacy.
+
+Threat Vector: Web application vulnerabilities (such as insecure direct object references, cross-site scripting, SQL injection), social engineering, phishing attacks.
+
+Threat Mitigation: Implement secure coding practices to prevent common web application vulnerabilities.
+
+Use strong encryption for data transmission, enable multi-factor authentication, educate members about the dangers of phishing attacks, use rate limiting to prevent brute-force attacks.
+
+Regularly patch and update systems, conduct regular security audits, have an incident response plan in place.
+-->
+
+
 <html>
     <head>
-        <title>VRU VR</title>
+        <title>RGU VR Society</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/main.css">
@@ -8,22 +33,26 @@
 
     <body>
         <header>
-            <img id="logo" src="images/hiking logo2.jpg" alt="main logo, hiking">
-            <h1 id="title">VR Society</h1></header>
-    
-        <nav><ul>
-            <li><a href='home_page.html'>Home Page</a></li>
-            <li class="active"><a href="registration.html">Registration/ Members Login</a></li>
-            <li><a href='event_calendar.html'>Event Calendar</a></li>
-            <li><a href='img_gallery.html'>Image Gallery</a></li>
-            <li><a href='social_media.html'>Social Media</a></li>
-        </ul></nav>
+            <div class="logo-title-container">
+                <img id="logo" src="images/VR logo.jpg" alt="main logo, VR">
+                <h1 id="title">RGU VR</h1>
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href='home_page.html'>Home Page</a></li>
+                <li class="active"><a href="registration.html">Registration/ Members Login</a></li>
+                <li><a href='event_calendar.html'>Event Calendar</a></li>
+                <li><a href='img_gallery.html'>Image Gallery</a></li>
+                <li><a href='social_media.html'>Social Media</a></li>
+            </ul>
+        </nav>
     
         <main>
             <div>
                 <fieldset>
                     <legend>Registration</legend>
-                    <h2>Registration</h2>
                     <form id="registerForm">
                         <label for="registerEmail">Email:</label><br>
                         <input type="email" id="registerEmail" name="email"><br>
@@ -35,7 +64,6 @@
         
                 <fieldset>
                     <legend>Login</legend>
-                    <h2>Login</h2>
                     <form id="loginForm">
                         <label for="loginEmail">Email:</label><br>
                         <input type="email" id="loginEmail" name="email"><br>
@@ -46,12 +74,17 @@
                 </fieldset>
             </div>
         </main>        
-    
-        <aside> </aside>
-    
-        <footer> </footer>
 
-        <script src="script.js"></script>
-    
+        <script src="scripts/script.js"></script>
+
+        <footer>
+            <div class="footer-content">
+                <p id="footer-content">© 2023 Kiril Valchanov. All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
